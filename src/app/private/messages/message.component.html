@@ -1,0 +1,13 @@
+<article>
+
+  <h1 class="h3 mb-2 text-gray-800">Wiadomość</h1>
+  <div class="card mb-4">
+    <div class="card-header text-black-50">
+      <b>{{message!.name}}</b> od <b>{{message!.author!.first_name}} {{message!.author!.last_name}}</b>
+    </div>
+    <div class="card-body">
+      {{message!.content}}
+    </div>
+  </div>
+
+</article>

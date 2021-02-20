@@ -1,0 +1,38 @@
+<article>
+
+  <h1 class="h3 mb-2 text-gray-800">Wiadomości</h1>
+
+  <div class="card shadow mb-4">
+    <div class="card-header py-3 ">
+      <header class="row">
+        <h2 class="m-0 font-weight-bold text-primary col-auto">Lista wiadomości</h2>
+        <a class="btn btn-primary col-auto btn-sm" *ngIf="loginUser.get().type == 2">Dodaj wiadomość</a>
+      </header>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <table class="table table-bordered w-100">
+            <thead>
+            <tr role="row">
+              <th>Nazwa</th>
+              <th>Od</th>
+            </thead>
+            <tbody>
+            <tr role="row" *ngFor="let message of messages">
+              <td>
+                <a [routerLink]="['/app', 'messages', message.id]"><strong>{{message.name}}</strong></a>
+                <p>{{ (message.content!.length>50)? (message.content | slice:0:50)+'..':(message.content) }}</p>
+              </td>
+              <td>
+                {{message.author!.first_name}}
+                {{message.author!.last_name}}
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

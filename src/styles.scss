@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+@import "assets/vendor/sb-admin/scss/variables";
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+// Import Custom SB Admin 2 Mixins and Components
+@import "assets/vendor/sb-admin/scss/mixins";
+@import "assets/vendor/sb-admin/scss/global";
+@import "assets/vendor/sb-admin/scss/utilities";
+
+// Custom Components
+@import "assets/vendor/sb-admin/scss/dropdowns";
+@import "assets/vendor/sb-admin/scss/navs";
+@import "assets/vendor/sb-admin/scss/buttons";
+@import "assets/vendor/sb-admin/scss/cards";
+@import "assets/vendor/sb-admin/scss/charts";
+@import "assets/vendor/sb-admin/scss/login";
+@import "assets/vendor/sb-admin/scss/error";
+@import "assets/vendor/sb-admin/scss/footer";
